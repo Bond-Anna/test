@@ -1,0 +1,18 @@
+.homePage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  color: gold;
+  background-image: url(./space-ge553c98fe_1920.png);
+}
+.text {
+  font-family: 'Droid Sans', arial, verdana, sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+  flex-direction: column;
+  margin: 0;
+  transform-origin: 50% 50%;
+  transform: perspective(300px) rotateX(30deg);
+}
