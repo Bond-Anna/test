@@ -7,7 +7,7 @@ secret information about Star Wars Heroes.
 ## To set this app locally on your laptop do next steps:
 
 Download zip of this repo. Open a terminal at the address of this folder.
-Install all dependencies of project run
+<br/>To install all dependencies of project run
 
 ### npm install
 
