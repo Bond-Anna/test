@@ -1,3 +1,48 @@
 .text {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
   color: gold;
+}
+.table {
+  width: 600px;
+  margin: auto;
+  border-collapse: collapse;
+  border-bottom: none;
+  color: #fff;
+}
+.name {
+  font-weight: bold;
+}
+th {
+  font-size: 20px;
+  padding: 10px;
+  border: 3px solid gold;
+  border-top: none;
+}
+th:first-child {
+  border-left: none;
+}
+th:last-child {
+  border-right: none;
+}
+
+td {
+  padding: 10px;
+  border: 3px solid gold;
+}
+td:first-child {
+  border-left: none;
+}
+td:not(:first-child) {
+  text-align: center;
+}
+td:last-child {
+  border-right: none;
+}
+
+tr:hover {
+  background-color: rgb(103, 103, 103);
 }

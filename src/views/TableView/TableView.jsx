@@ -1,35 +1,28 @@
-import { useGetAllPeopleQuery } from '../../redux/swapi';
 import css from './tableView.module.css';
 
-const TableView = () => {
-  const { data, error, isLoading } = useGetAllPeopleQuery();
-  // const people = ;
+const TableView = ({ people }) => {
   return (
-    <>
-      <h1 className={css.text}>Table</h1>
-      {data && (
-        <table>
-          <thead>
-            <tr>
-              <td>Name</td>
-              <td>Birth Year</td>
-              <td>Height</td>
-              <td>Mass</td>
-            </tr>
-          </thead>
-          <tbody>
-            {data.results.map(({ name, birth_year, height, mass }) => (
-              <tr key={name}>
-                <td>{name}</td>
-                <td>{birth_year}</td>
-                <td>{height}</td>
-                <td>{mass}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
-    </>
+    <table className={css.table}>
+      <caption className={css.text}>Check your Hero</caption>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Birth Year</th>
+          <th>Height</th>
+          <th>Mass</th>
+        </tr>
+      </thead>
+      <tbody>
+        {people.map(({ name, birth_year, height, mass }) => (
+          <tr key={name}>
+            <td className={css.name}>{name}</td>
+            <td>{birth_year}</td>
+            <td>{height}</td>
+            <td>{mass}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 

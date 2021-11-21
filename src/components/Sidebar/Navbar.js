@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import * as FaIcons from 'react-icons/fa';
-import * as AiIcons from 'react-icons/ai';
-import * as IoIcons from 'react-icons/io';
+import { FaBars } from 'react-icons/fa';
+import { AiOutlineClose, AiFillHome } from 'react-icons/ai';
+import { IoIosPaper } from 'react-icons/io';
 import css from './navbar.module.css';
 
-function Navbar() {
+export function Navbar() {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -14,14 +14,14 @@ function Navbar() {
     <>
       <div className={css.navbar}>
         <NavLink to="#" className={css.menuBars}>
-          <FaIcons.FaBars onClick={showSidebar} />
+          <FaBars onClick={showSidebar} />
         </NavLink>
       </div>
       <nav className={`${css.navMenu} ${sidebar ? css.active : css.navMenu}`}>
         <div className={css.navMenuItems} onClick={showSidebar}>
           <div className={css.navbarToggle}>
             <NavLink to="#" className={css.menuBars}>
-              <AiIcons.AiOutlineClose />
+              <AiOutlineClose />
             </NavLink>
           </div>
           <NavLink
@@ -30,7 +30,7 @@ function Navbar() {
               `${css.navText} ${isActive ? css.activeLink : css.navText}`
             }
           >
-            <AiIcons.AiFillHome className={css.icon} />
+            <AiFillHome className={css.icon} />
             Home
           </NavLink>
           <NavLink
@@ -39,7 +39,7 @@ function Navbar() {
               `${css.navText} ${isActive ? css.activeLink : css.navText}`
             }
           >
-            <IoIcons.IoIosPaper className={css.icon} />
+            <IoIosPaper className={css.icon} />
             Table
           </NavLink>
         </div>
@@ -47,5 +47,3 @@ function Navbar() {
     </>
   );
 }
-
-export default Navbar;
