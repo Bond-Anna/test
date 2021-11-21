@@ -1,4 +1,4 @@
-# [Start Wars Heroes](https://ab-star-wars.netlify.app/)
+# [Star Wars Heroes](https://ab-star-wars.netlify.app/)
 
 This app will meet you with Greeting page. On the top of it you can find the
 icon which will show sidebar with novigation. There you can choose page with
