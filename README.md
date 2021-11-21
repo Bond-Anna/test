@@ -15,4 +15,5 @@ Start development mode
 
 ### npm start
 
-Open http://localhost:3000 to view it in the browser
+Open http://localhost:3000 to view it in the browser  
+<br/> On this task I spend 9 hours
